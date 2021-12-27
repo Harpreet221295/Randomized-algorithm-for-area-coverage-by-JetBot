@@ -14,10 +14,10 @@ Below is the diagram of logical architecture and control flow
 
 
 The area-coverage system is logically decomposed into the following components:-
-● Motion Driver:- Responsible for carrying out rectilinear motion of the robot in discrete time-steps.
-● Randomization Imparter :- It rotates the robot in a random direction at a place without causing any rectilinear motion.
-● Obstacle Avoidance :- Motion Driver proposes the new state of the robot based on the motion it can impart and this component is responsible to tell Motion Driver whether transitioning into such a state is feasible/allowed or not.
-● SLAM :- Motion Driver after executing the motion sends the anticipated robot’s position to the SLAM component where Kalman Filter updates are performed using the robot’s anticipated position and covariance matrix and the detected marker’s covariance and estimated positions are also updated.
+- Motion Driver:- Responsible for carrying out rectilinear motion of the robot in discrete time-steps.
+- Randomization Imparter :- It rotates the robot in a random direction at a place without causing any rectilinear motion.
+- Obstacle Avoidance :- Motion Driver proposes the new state of the robot based on the motion it can impart and this component is responsible to tell Motion Driver whether transitioning into such a state is feasible/allowed or not.
+- SLAM :- Motion Driver after executing the motion sends the anticipated robot’s position to the SLAM component where Kalman Filter updates are performed using the robot’s anticipated position and covariance matrix and the detected marker’s covariance and estimated positions are also updated.
 
 
 
@@ -33,9 +33,9 @@ Following are the steps of my randomized planning algorithm(and reasons for taki
 I have mentioned in the above steps that planner_node sleeps for some time(or stops at the same position). This is done since the robot takes some time to properly detect any april tags and get measurements for good accuracy. In the experiments and this project, I kept this sleep time as 5s.
 
 ## Motion Execution
-● The rectilinear motion carried out by the motion driver is discretized into time steps of 0.3s. After carrying out many trials, I determined that the robot moves anywhere between 28-32 cm and does change its orientation between 30-50 degrees to show a shift towards left. The motion is carried out giving fixed left and right motor values of -0.92 and 0.95 for two iterations and -0.72 and -0.75 for one iteration respectively. The reason for hardcoding is to properly enable the robot to move in random and controlled fashion without crashing into the obstacles.
-● Randomization Imparter rotates the robot with an angle randomly selected from [45,90,135,180]. The rotation can be applied either clockwise or anticlockwise which is again selected with probability 0.5. In planner_node.py, this random rotation is achieved using the random_rotate2() function.
-● After randomization Imparter finished rotating the robot or if there’s no new detection after the motion driver finished rectilinear motion, then the robot is rotated by 35 degrees angle using the function rotate_robot() in place in anticlockwise direction.
+- The rectilinear motion carried out by the motion driver is discretized into time steps of 0.3s. After carrying out many trials, I determined that the robot moves anywhere between 28-32 cm and does change its orientation between 30-50 degrees to show a shift towards left. The motion is carried out giving fixed left and right motor values of -0.92 and 0.95 for two iterations and -0.72 and -0.75 for one iteration respectively. The reason for hardcoding is to properly enable the robot to move in random and controlled fashion without crashing into the obstacles.
+- Randomization Imparter rotates the robot with an angle randomly selected from [45,90,135,180]. The rotation can be applied either clockwise or anticlockwise which is again selected with probability 0.5. In planner_node.py, this random rotation is achieved using the random_rotate2() function.
+- After randomization Imparter finished rotating the robot or if there’s no new detection after the motion driver finished rectilinear motion, then the robot is rotated by 35 degrees angle using the function rotate_robot() in place in anticlockwise direction.
 
 ## Results
 [![Alt text](https://img.youtube.com/vi/IEnVMQy53Ek/0.jpg)](https://www.youtube.com/watch?v=IEnVMQy53Ek)
