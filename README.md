@@ -42,7 +42,7 @@ I have mentioned in the above steps that planner_node sleeps for some time(or st
 - After randomization Imparter finished rotating the robot or if there’s no new detection after the motion driver finished rectilinear motion, then the robot is rotated by 35 degrees angle using the function rotate_robot() in place in anticlockwise direction.
 
 ## ROS Graph
-<a href="url"><img src="./rosgraph.png" height="600" width="1200" ></a>
+<a href="url"><img src="./rosgraph.png" height="300" width="300" ></a>
 
 ## Results
 [![Alt text](https://img.youtube.com/vi/IEnVMQy53Ek/0.jpg)](https://www.youtube.com/watch?v=IEnVMQy53Ek)
