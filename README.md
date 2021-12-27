@@ -44,6 +44,9 @@ I have mentioned in the above steps that planner_node sleeps for some time(or st
 ## ROS Graph
 <a href="url"><img src="./rosgraph.png" height="150" width="3000" ></a>
 
+## Code Setup
+Since this project uses cameras and april tags for detection of the landmarks, therefore it is necessary to calibrate the cameras. Check the setup.pdf for camera calibration and the importing the boiler code from <a href="https://github.com/AftermathK/jetbot_ros">here</a>. Replace the planner_node.py and localization_node.py in the pulled code with the planner_node.py and localization_node.py from this repository. The motor values for the translation and rotational motion do need to be recalibrated.
+
 ## Results
 [![Alt text](https://img.youtube.com/vi/IEnVMQy53Ek/0.jpg)](https://www.youtube.com/watch?v=IEnVMQy53Ek)
 
