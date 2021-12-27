@@ -3,6 +3,9 @@
 ## Task
 An environment is constructed(as asked in question) with april tags belonging to two distinct ids - 1 and 4, at its edges(20cm away from the edges, will explain the reason later). I couldn’t afford a 10ftx10ft space so like hw2/3/4, I’m doing this homework in the 2m x 2m space. Following is the pictorial representation of the arena and its corresponding image.
 
+<a href="url"><img src="./arena_img.png" height="400" width="400" ></a>
+<a href="url"><img src="./arena_pic.png" height="400" width="400" ></a>
+
 A robot is placed at a point in this arena. The task is to plan the motion of the robot to cover the entire 2m x 2m arena.
 
 ## Description of Planning Algorithm
