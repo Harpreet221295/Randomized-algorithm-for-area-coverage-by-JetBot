@@ -12,7 +12,7 @@ I shall first discuss the architecture of the logical components of my randomize
 ## Architecture
 Below is the diagram of logical architecture and control flow
 
-<a href="url"><img src="./architecture.png" height="400" width="400" ></a>
+<a href="url"><img src="./architecture.png" height="500" width="800" ></a>
 
 The area-coverage system is logically decomposed into the following components:-
 - Motion Driver:- Responsible for carrying out rectilinear motion of the robot in discrete time-steps.
