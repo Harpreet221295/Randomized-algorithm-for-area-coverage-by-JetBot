@@ -41,6 +41,9 @@ I have mentioned in the above steps that planner_node sleeps for some time(or st
 - Randomization Imparter rotates the robot with an angle randomly selected from [45,90,135,180]. The rotation can be applied either clockwise or anticlockwise which is again selected with probability 0.5. In planner_node.py, this random rotation is achieved using the random_rotate2() function.
 - After randomization Imparter finished rotating the robot or if there’s no new detection after the motion driver finished rectilinear motion, then the robot is rotated by 35 degrees angle using the function rotate_robot() in place in anticlockwise direction.
 
+## ROS Graph
+<a href="url"><img src="./rosgraph.png" height="300" width="900" ></a>
+
 ## Results
 [![Alt text](https://img.youtube.com/vi/IEnVMQy53Ek/0.jpg)](https://www.youtube.com/watch?v=IEnVMQy53Ek)
 
