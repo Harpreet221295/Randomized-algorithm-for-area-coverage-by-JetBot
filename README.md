@@ -52,4 +52,6 @@ Since this project uses cameras and april tags for detection of the landmarks, t
 
 #### <a href="https://drive.google.com/file/d/1HaqsNhixJc6M0ahQyAAjoNfvRsPvGhp-/view?usp=sharing">Link to full Report</a>
 
+### Credits
+https://github.com/AftermathK/jetbot_ros
 
